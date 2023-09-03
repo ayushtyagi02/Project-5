@@ -5,8 +5,8 @@ import Header from "./components/Header";
 import Blogs from "./components/Blogs";
 import Pagination from "./components/Pagination";
 export default function App() {
-  const { fetchData, page} = useContext(AppContext);
-
+  const { fetchData, page, isDark} = useContext(AppContext);
+  
   useEffect(() => {
   
     fetchData(page);
@@ -14,10 +14,10 @@ export default function App() {
   }, []);
 
   return (
-    <div>
+    <div className={`${isDark ? "dark" : "light"} duration-150`}>
     
       <Header />
-      <div className="my-[100px]">
+      <div className="mt-[93px] mb-[50px] py-6 ">
         <Blogs />
         <Pagination />
       </div>

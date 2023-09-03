@@ -7,7 +7,7 @@ import React from "react"
   const {posts,loading}=useContext(AppContext)
  
   return (
-    <div className="flex flex-col gap-y-10 my-4">
+    <div className="flex flex-col gap-y-10 ">
       {loading ? (<div className="min-h-[80vh] w-full flex justify-center items-center">
       <div class="custom-loader"></div>
         </div>) :(posts.length ===0 ? ( <div className="min-h-[80vh] w-full flex justify-center items-center">

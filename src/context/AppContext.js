@@ -8,6 +8,7 @@ export const AppContext = createContext()
   const [pageno, setPageno]= useState(1)
   const [totalpages, setTotalPages]= useState(null)
   const [posts, setPosts]= useState([])
+  const [isDark,setisDark]= useState(false)
   
   async function fetchData(pageno){
     setLoading(true)
@@ -46,7 +47,9 @@ export const AppContext = createContext()
   setPosts,
   posts,
   fetchData,
-  pageChangeHandler
+  pageChangeHandler,
+  isDark,
+  setisDark
 }
  return <AppContext.Provider value={values}>
  {children}
